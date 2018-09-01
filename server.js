@@ -19,6 +19,6 @@ htmlRoutes(app);
 apiRoutes(app);
 
 // Tells server to listen on a port.
-app.listen(PORT), function() {
+app.listen(PORT, function() {
     console.log("Listening on http://localhost:" + PORT);
-};
+});
