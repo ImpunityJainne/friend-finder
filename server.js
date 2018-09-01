@@ -4,7 +4,7 @@ var bodyParser = require("body-parser");
 
 // Express setup
 var app = express();
-var PORT = process.env.port || 3000;
+var PORT = process.env.PORT || 3000;
 
 // Setting up Express to handle data parsing
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -19,6 +19,6 @@ htmlRoutes(app);
 apiRoutes(app);
 
 // Tells server to listen on a port.
-app.listen(PORT, function() {
+app.listen(PORT), function() {
     console.log("Listening on http://localhost:" + PORT);
-})
+};
