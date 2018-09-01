@@ -1,4 +1,5 @@
-// Setting up data - hardcoded with Grey's Anatomy characters
+// office mates (friends) data
+
 var friends = [
     {
         "name": "Hellen Goodtime",
