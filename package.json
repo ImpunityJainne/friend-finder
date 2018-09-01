@@ -1,7 +1,7 @@
 {
   "name": "friendfinder",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple, quiz-style app that helps you find others with a similar mindset.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,7 +10,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "path": "^0.12.7"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ImpunityJainne/friend-finder.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/ImpunityJainne/friend-finder/issues"
+  },
+  "homepage": "https://github.com/ImpunityJainne/friend-finder#readme"
 }
