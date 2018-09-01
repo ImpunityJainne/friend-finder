@@ -7,10 +7,11 @@ function apiRoutes(app) {
     });
 
     app.post("/api/friends", function (req, res) {
-        // Get the info from newFriend
-        var newFriend = req.body;
 
-        // Compare newFriend's scores to all of the other scores in the friends array
+        // Get the info from userData
+        var userData = req.body;
+
+        // Compare userData's scores to all of the other scores in the friends array
         var totalDiff = [];
 
         for (var i = 0; i < friends.length; i++) {
@@ -18,10 +19,11 @@ function apiRoutes(app) {
             var diff = 0;
 
             for (var j = 0; j < friends[i].scores.length; j++) {
-                diff += Math.abs(friends[i].scores[j] - parseInt(newFriend.scores[j]));
+                diff += Math.abs(friends[i].scores[j] - parseInt(userData.scores[j]));
             }
 
             totalDiff.push(diff);
+
         };
 
         // Whoever's totalDiff is the lowest is the user's match
@@ -29,8 +31,8 @@ function apiRoutes(app) {
 
         var match = friends[matchIndex];
 
-        // Add newFriend to the friends array
-        friends.push(newFriend);
+        // Add userData to the friends array
+        friends.push(userData);
 
         // Send the match's info back to survey.html
         return res.json(match);

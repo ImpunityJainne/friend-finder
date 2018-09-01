@@ -222,24 +222,32 @@
 
       // Form validation
       function validateForm() {
+
         var isValid = true;
         $(".form-control").each(function() {
+
           if ($(this).val() === "") {
+
             isValid = false;
+
           }
         });
 
         $(".chosen-select").each(function() {
 
           if ($(this).val() === "") {
+
             isValid = false;
           }
         });
+
         return isValid;
+
       }
 
-      // If all required fields are filled
+      // If all fields are filled
       if (validateForm()) {
+        
         // Create an object for the user's data
         var userData = {
           name: $("#name").val(),
